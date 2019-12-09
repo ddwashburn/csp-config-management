@@ -8,7 +8,6 @@ data:
 kind: Secret
 metadata:
   name: dialog-flow-cacert
-  namespace: istio-system
   annotations:
     configmanagement.gke.io/cluster-selector: selector-env-dev
 type: Opaque
