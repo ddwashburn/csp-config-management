@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dialog-flow-deployment
+  labels:
+    app: dialog-flow
+  annotations:
+    configmanagement.gke.io/cluster-selector: selector-env-dev
+spec:
+  selector:
+    matchLabels:
+      app: dialog-flow
+  template:
+    metadata:
+      labels:
+        app: dialog-flow
+    spec:
+      containers:
+      - name: time
+        image: gcr.io/andresolarte-istio-pg/time-lady:93a7deb
+        ports:
+        - containerPort: 8080
