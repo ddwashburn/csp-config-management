@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dialog-flow-service
+  labels:
+    app: dialog-flow
+  annotations:
+    configmanagement.gke.io/cluster-selector: selector-env-dev
+spec:
+  selector:
+    app: dialog-flow
+  ports:
+  - port: 8080
+    targetPort: 8080
+  type: ClusterIP

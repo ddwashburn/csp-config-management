@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: dialog-flow-gateway
+  annotations:
+    configmanagement.gke.io/cluster-selector: selector-env-dev
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - dialog-flow.netservicesvm.com
+    port:
+      number: 80
+      name: http
+      protocol: HTTP
+  - hosts:
+    - dialog-flow.netservicesvm.com
+    port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    tls:
+      credentialName: "dialog-flow"
+      mode: MUTUAL
