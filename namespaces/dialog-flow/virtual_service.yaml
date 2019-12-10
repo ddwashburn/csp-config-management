@@ -14,7 +14,7 @@ spec:
     - uri:
         prefix: "/"
     route:
-    - destination:
-        host: dialog-flow.default.svc.cluster.local
+     destination:
+        host: dialog-flow-svc.dialog-flow.svc.cluster.local
         port:
           number: 8080

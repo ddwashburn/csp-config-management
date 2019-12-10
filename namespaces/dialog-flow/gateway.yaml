@@ -9,17 +9,17 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - dialog-flow.netservicesvm.com
+    - dialog-flow.mytest.com
     port:
       number: 80
       name: http
       protocol: HTTP
   - hosts:
-    - dialog-flow.netservicesvm.com
+    - dialog-flow.mytest.com
     port:
       name: https
       number: 443
       protocol: HTTPS
     tls:
-      credentialName: "dialog-flow"
-      mode: MUTUAL
+      credentialName: "dialog-flow-cert-tls"
+      mode: SIMPLE
