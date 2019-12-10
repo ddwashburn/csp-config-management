@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dialog-flow-service
+  name: dialog-flow-svc
   labels:
     app: dialog-flow
   annotations:
