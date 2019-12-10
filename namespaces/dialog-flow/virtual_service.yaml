@@ -6,7 +6,7 @@ metadata:
     configmanagement.gke.io/cluster-selector: selector-env-dev
 spec:
   hosts:
-  - dialog-flow.netservicesvm.com
+  - dialog-flow.mytest.com
   gateways:
   - dialog-flow-gateway
   http:
