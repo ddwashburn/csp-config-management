@@ -15,6 +15,6 @@ spec:
         prefix: "/"
     route:
      destination:
-        host: dialog-flow-svc.dialog-flow.svc.cluster.local
+        host: "dialog-flow-svc.dialog-flow.svc.cluster.local"
         port:
           number: 8080
